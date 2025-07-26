@@ -146,9 +146,9 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(26, 26, 26, 0.5); /* Mais escuro, ligeiramente transparente */
-  backdrop-filter: blur(10px);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  background-color: rgba(26, 26, 26, 0.2); /* Mais escuro, ligeiramente transparente */
+  backdrop-filter: blur(5px);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
   z-index: 1000;
   padding: 0.5rem 5%;
   display: flex;
@@ -180,7 +180,7 @@ section {
 
 /* Seção Hero */
 .hero-section {
-  background-image: url("https://www.gismar.com.br/cdn/shop/articles/pexels-murilo-fonseca-10647765_4ccddc8b-f0a1-4727-8101-e453d1f0987d.jpg?v=1738787435");
+  background-image: url("img/hero-foto.png"); /* Imagem de fundo */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -202,7 +202,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .hero-content {
@@ -232,7 +232,7 @@ section {
 .partners-section {
   background-color: var(--cor-texto-principal);
   color: var(--cor-texto-escuro);
-  padding: 2.5rem 0;
+  padding: 2rem 0;
   overflow: hidden;
   white-space: nowrap;
   width: 100vw;
@@ -263,7 +263,7 @@ section {
 }
 
 .carousel-track img {
-  height: 3rem;
+  height: 3.2rem;
   margin: 0 3rem;
   filter: grayscale(100%) brightness(200%);
   opacity: 0.5;
@@ -281,7 +281,7 @@ section {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-90%);
+    transform: translateX(-170%);
   }
 }
 

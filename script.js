@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const targetId = this.getAttribute("href")
       const targetElement = document.querySelector(targetId)
       const headerOffset = document.querySelector(".header").offsetHeight
-      const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset
-      const offsetPosition = elementPosition - headerOffset - 20
+      const offsetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerOffset - 20
 
       window.scrollTo({
         top: offsetPosition,
@@ -17,34 +16,41 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
+  // Rolagem para o topo ao clicar na logo
+  document.querySelector(".nav-logo-link").addEventListener("click", (e) => {
+    e.preventDefault()
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  })
+
   // Expansão do Cartão do Catálogo
   const expandButtons = document.querySelectorAll(".catalog-card .expand-button")
 
   expandButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      const cardContent = button.closest(".card-content")
-      const cardDescription = cardContent.querySelector(".card-description")
-
-      // Verifica se o botão clicado já está ativo
-      const isCurrentlyActive = button.classList.contains("active")
+      const card = button.closest(".catalog-card")
+      const isCurrentlyExpanded = card.classList.contains("expanded")
 
       // Fecha todos os outros cartões abertos
-      expandButtons.forEach((otherButton) => {
-        const otherCardContent = otherButton.closest(".card-content")
-        const otherCardDescription = otherCardContent.querySelector(".card-description")
-
-        if (otherButton.classList.contains("active")) {
-          otherButton.classList.remove("active")
-          otherButton.setAttribute("aria-expanded", "false")
-          otherCardDescription.classList.remove("active")
+      document.querySelectorAll(".catalog-card.expanded").forEach((openCard) => {
+        if (openCard !== card) {
+          openCard.classList.remove("expanded")
+          openCard.querySelector(".expand-button").classList.remove("active")
+          openCard.querySelector(".expand-button").setAttribute("aria-expanded", "false")
         }
       })
 
-      // Se o botão clicado não estava ativo, ative-o
-      if (!isCurrentlyActive) {
+      // Alterna o estado do cartão clicado
+      if (!isCurrentlyExpanded) {
+        card.classList.add("expanded")
         button.classList.add("active")
-        cardDescription.classList.add("active")
         button.setAttribute("aria-expanded", "true")
+      } else {
+        card.classList.remove("expanded")
+        button.classList.remove("active")
+        button.setAttribute("aria-expanded", "false")
       }
     })
   })
@@ -111,8 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let targetY = 0
 
   // Define o fator de interpolação (quão rápido o cursor alcança)
-  // Valores menores significam mais atraso, valores maiores significam menos atraso
-  const lerpFactor = 0.1 // Experimente com este valor (ex: 0.08 para mais atraso, 0.15 para menos)
+  const lerpFactor = 0.1
 
   // Função para atualizar a posição do cursor
   function animateCursor() {
@@ -156,4 +161,59 @@ document.addEventListener("DOMContentLoaded", () => {
       customCursor.style.height = "10px"
     }
   })
+
+  // Animação dos cards da seção "Números" ao rolar
+  const numberCards = document.querySelectorAll(".numbers-grid .number-card")
+
+  const numberCardObserverOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // 50% do card visível para animar
+  }
+
+  const numberCardObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible")
+        observer.unobserve(entry.target) // Para animar apenas uma vez
+      }
+    })
+  }, numberCardObserverOptions)
+
+  numberCards.forEach((card, index) => {
+    card.style.transitionDelay = `${index * 0.15}s` // Atraso escalonado
+    numberCardObserver.observe(card)
+  })
+
+  // Lógica do Menu Mobile
+  const mobileMenuButton = document.querySelector(".mobile-menu-button")
+  const closeMenuButton = document.querySelector(".close-menu-button")
+  const mobileNavOverlay = document.querySelector(".mobile-nav-overlay")
+  const mobileNavLinks = document.querySelectorAll(".mobile-nav-link")
+
+  if (mobileMenuButton && mobileNavOverlay && closeMenuButton) {
+    mobileMenuButton.addEventListener("click", () => {
+      mobileNavOverlay.classList.add("open")
+      document.body.style.overflow = "hidden" // Previne rolagem do corpo
+    })
+
+    closeMenuButton.addEventListener("click", () => {
+      mobileNavOverlay.classList.remove("open")
+      document.body.style.overflow = "" // Restaura rolagem do corpo
+    })
+
+    mobileNavOverlay.addEventListener("click", (e) => {
+      if (e.target === mobileNavOverlay) {
+        mobileNavOverlay.classList.remove("open")
+        document.body.style.overflow = ""
+      }
+    })
+
+    mobileNavLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileNavOverlay.classList.remove("open")
+        document.body.style.overflow = ""
+      })
+    })
+  }
 })

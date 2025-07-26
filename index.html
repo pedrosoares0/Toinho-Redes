@@ -12,19 +12,38 @@
   <div class="custom-cursor"></div> 
 
   <header class="header">
-      <nav class="main-navigation">
-          <a href="#catalog" class="nav-link">Catálogo</a>
-          <a href="#contact" class="nav-link">Contato</a>
-          <a href="#about" class="nav-link">Sobre</a>
-          <a href="#partners" class="nav-link">Parcerias</a>
-      </nav>
-  </header>
+    <nav class="main-navigation">
+        <a href="#catalog" class="nav-link desktop-nav-link">Catálogo</a>
+        <a href="#contact" class="nav-link desktop-nav-link">Contato</a>
+        <a href="#hero" class="nav-logo-link">
+            <img src="img/nome-logo-toinho.png" alt="Toinho Redes Logo" class="nav-logo">
+        </a>
+        <a href="#about" class="nav-link desktop-nav-link">Sobre</a>
+        <a href="#partners" class="nav-link desktop-nav-link">Parcerias</a>
+        <button class="mobile-menu-button" aria-label="Abrir menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+    </nav>
+    <div class="mobile-nav-overlay">
+        <div class="mobile-nav-content">
+            <button class="close-menu-button" aria-label="Fechar menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+            <nav class="mobile-navigation-links">
+                <a href="#catalog" class="nav-link mobile-nav-link">Catálogo</a>
+                <a href="#contact" class="nav-link mobile-nav-link">Contato</a>
+                <a href="#about" class="nav-link mobile-nav-link">Sobre</a>
+                <a href="#partners" class="nav-link mobile-nav-link">Parcerias</a>
+            </nav>
+        </div>
+    </div>
+</header>
 
   <main>
     <section id="hero" class="hero-section animated-section" data-animate-elements>
         <div class="hero-content">
             <h1 class="animate-item">Rede boa <br> tem nome!</h1>
-            <p class="animate-item">Toinho Redes, essa com certeza você já viu por aí.</p>
+            <p class="animate-item"> <strong>Toinho Redes</strong>. Você já viu, já jogou ou vai jogar.</p>
         </div>
     </section>
 
@@ -32,165 +51,169 @@
         <h2 class="section-title animate-item">Nossos Parceiros</h2>
         <div class="partners-carousel animate-item">
             <div class="carousel-track">
-                <img src="img\logo-caffeine.png" alt="Logo Caffeine">
-                <img src="img\logo-corona.png" alt="Logo Corona">
-                <img src="img\logo-clube.png" alt="Logo Clube">
-                <img src="img\logo-gatorade.png" alt="Logo Gatorade">
-                <img src="img\logo-amstel.png" alt="Logo Amstel">
-                <img src="img\logo-vitoria.png" alt="Logo Vitória">
-                <img src="img\logo-mikasa.png" alt="Logo Mikasa">
-                <img src="img\logo-fafeb.png" alt="Logo Fafeb">
-                <img src="img\logo-sol.png" alt="Logo Sol">
-                <img src="img\logo-caffeine.png" alt="Logo Caffeine">
-                <img src="img\logo-corona.png" alt="Logo Corona">
-                <img src="img\logo-clube.png" alt="Logo Clube">
-                <img src="img\logo-gatorade.png" alt="Logo Gatorade">
-                <img src="img\logo-amstel.png" alt="Logo Amstel">
-                <img src="img\logo-vitoria.png" alt="Logo Vitória">
-                <img src="img\logo-mikasa.png" alt="Logo Mikasa">
-                <img src="img\logo-fafeb.png" alt="Logo Fafeb">
-                <img src="img\logo-sol.png" alt="Logo Sol">
-                <img src="img\logo-caffeine.png" alt="Logo Caffeine">
-                <img src="img\logo-corona.png" alt="Logo Corona">
-                <img src="img\logo-clube.png" alt="Logo Clube">
-                <img src="img\logo-gatorade.png" alt="Logo Gatorade">
-                <img src="img\logo-amstel.png" alt="Logo Amstel">
-                <img src="img\logo-vitoria.png" alt="Logo Vitória">
-                <img src="img\logo-mikasa.png" alt="Logo Mikasa">
-                <img src="img\logo-fafeb.png" alt="Logo Fafeb">
-                <img src="img\logo-sol.png" alt="Logo Sol">
+                <img src="img/logo-clube.png" alt="Logo Clube">
+                <img src="img/logo-caffeine.png" alt="Logo Caffeine">
+                <img src="img/logo-gatorade.png" alt="Logo Gatorade">
+                <img src="img/logo-amstel.png" alt="Logo Amstel">
+                <img src="img/logo-corona.png" alt="Logo Corona">
+                <img src="img/logo-vitoria.png" alt="Logo Vitória">
+                <img src="img/logo-mikasa.png" alt="Logo Mikasa">
+                <img src="img/logo-fafeb.png" alt="Logo Fafeb">
+                <img src="img/logo-sol.png" alt="Logo Sol">
+                <img src="img/logo-clube.png" alt="Logo Clube">
+                <img src="img/logo-caffeine.png" alt="Logo Caffeine">
+                <img src="img/logo-gatorade.png" alt="Logo Gatorade">
+                <img src="img/logo-amstel.png" alt="Logo Amstel">
+                <img src="img/logo-corona.png" alt="Logo Corona">
+                <img src="img/logo-vitoria.png" alt="Logo Vitória">
+                <img src="img/logo-mikasa.png" alt="Logo Mikasa">
+                <img src="img/logo-fafeb.png" alt="Logo Fafeb">
+                <img src="img/logo-sol.png" alt="Logo Sol">
+
 
             </div>
         </div>
     </section>
 
     <section id="photos" class="photos-section animated-section" data-animate-elements>
-        <h2 class="section-title animate-item">Nossa Galeria</h2>
+        <h2 class="section-title animate-item">Galeria</h2>
         <div class="photo-grid">
             <div class="photo-item animate-item photo-item-1">
-                <img src="https://i.pinimg.com/736x/e9/9f/b7/e99fb7e1e2f53533607ec64e46fa36aa.jpg" alt="Futevôlei net in action">
+                <img src="https://images.pexels.com/photos/29236360/pexels-photo-29236360.jpeg" alt="Futevôlei net in action">
             </div>
             <div class="photo-item animate-item photo-item-2">
-                <img src="https://i.pinimg.com/1200x/f7/da/d0/f7dad021b687f6c831f3c40d2280ef48.jpg" alt="Futevôlei net detail">
+                <img src="https://i.pinimg.com/736x/7e/2b/bb/7e2bbbd45c7b33e621760b400d018fff.jpg" alt="Futevôlei net detail">
             </div>
             <div class="photo-item animate-item photo-item-3">
-                <img src="https://i.pinimg.com/736x/fa/81/32/fa81329d62b1bc066e2ef8c709f5f6d1.jpg" alt="Futevôlei net on the beach">
+                <img src="https://images.pexels.com/photos/29236371/pexels-photo-29236371.jpeg" alt="Futevôlei net on the beach">
             </div>
             <div class="photo-item animate-item photo-item-4">
-                <img src="img\redeopen.png" alt="Futevôlei players with the net">
+                <img src="img/redeopen.png" alt="Futevôlei players with the net">
             </div>
             <div class="photo-item animate-item photo-item-5">
                 <img src="img/rede_praiana.png" alt="Futevôlei net at sunset">
             </div>
             <div class="photo-item animate-item photo-item-6">
-                <img src="/placeholder.svg?height=400&width=300" alt="Vertical futevôlei net">
+                <img src="https://images.pexels.com/photos/28207837/pexels-photo-28207837.jpeg" alt="Vertical futevôlei net">
             </div>
         </div>
     </section>
 
     <section id="catalog" class="catalog-section animated-section" data-animate-elements>
-        <h2 class="section-title animate-item">Nosso Catálogo</h2>
+        <h2 class="section-title animate-item">Catálogo</h2>
         <div class="catalog-grid">
             <div class="catalog-card animate-item">
-                <img src="https://6d995b8381.cbaul-cdnwnd.com/38958216990b58d66c8d7fd8b0c6ff46/200000385-5c5b95d55c/IMG_5107.JPG?ph=6d995b8381" alt="Orelha">
-                <div class="card-content">
-                    <h3>Rede Orelha</h3>
+                <div class="card-header">
+                    <h3 class="card-title">Rede Orelha</h3>
+                    <p class="card-status">Disponível</p>
+                </div>
+                <div class="card-image-container">
+                    <img src="https://6d995b8381.cbaul-cdnwnd.com/38958216990b58d66c8d7fd8b0c6ff46/200000385-5c5b95d55c/IMG_5107.JPG?ph=6d995b8381" alt="Orelha">
+                </div>
+                <div class="card-footer">
+                    <div class="product-info">
+                        <span class="product-name">Rede Orelha</span>
+                        <span class="product-category">Futevôlei</span>
+                    </div>
                     <button class="expand-button" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
                     </button>
-                    <div class="card-description">
-                        <p>Rede de alta durabilidade, ideal para jogos intensos. Possui reforço nas laterais para maior estabilidade e resistência ao vento.</p>
-                    </div>
+                </div>
+                <div class="card-description-expanded">
+                    <p>Rede de alta durabilidade, ideal para jogos intensos. Possui reforço nas laterais para maior estabilidade e resistência ao vento.</p>
                 </div>
             </div>
             <div class="catalog-card animate-item">
-                <img src="https://i.pinimg.com/1200x/57/8a/e4/578ae4dbef635b2d727b7653e73bad6f.jpg" alt="4 Faixas">
-                <div class="card-content">
-                    <h3>Rede 4 faixas</h3>
+                <div class="card-header">
+                    <h3 class="card-title">Rede 4 faixas</h3>
+                    <p class="card-status">Disponível</p>
+                </div>
+                <div class="card-image-container">
+                    <img src="https://i.pinimg.com/1200x/57/8a/e4/578ae4dbef635b2d727b7653e73bad6f.jpg" alt="4 Faixas">
+                </div>
+                <div class="card-footer">
+                    <div class="product-info">
+                        <span class="product-name">Rede 4 faixas</span>
+                        <span class="product-category">Futevôlei</span>
+                    </div>
                     <button class="expand-button" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
                     </button>
-                    <div class="card-description">
-                        <p>Desenvolvida para atletas de alto rendimento, com malha fina e material que garante a tensão perfeita para o jogo.</p>
+                </div>
+                <div class="card-description-expanded">
+                    <p>Desenvolvida para atletas de alto rendimento, com malha fina e material que garante a tensão perfeita para o jogo.</p>
+                </div>
+            </div>
+    
+            <div class="catalog-card animate-item">
+                <div class="card-header">
+                    <h3 class="card-title">Redinha</h3>
+                    <p class="card-status">Disponível</p>
+                </div>
+                <div class="card-image-container">
+                    <img src="img/redinha.jfif" alt="Redinha">
+                </div>
+                <div class="card-footer">
+                    <div class="product-info">
+                        <span class="product-name">Redinha</span>
+                        <span class="product-category">Futevôlei</span>
                     </div>
+                    <button class="expand-button" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+                    </button>
+                </div>
+                <div class="card-description-expanded">
+                    <p>Crie sua rede com cores e logotipos exclusivos. Destaque-se na quadra com um produto feito sob medida para você.</p>
                 </div>
             </div>
             <div class="catalog-card animate-item">
-                <img src="https://i.pinimg.com/736x/f4/75/6b/f4756bdf548e72983922ba65bd8b4158.jpg" alt="3 Faixas">
-                <div class="card-content">
-                    <h3>Rede 3 faixas</h3>
+                <div class="card-header">
+                    <h3 class="card-title">BeachTennis</h3>
+                    <p class="card-status">Disponível</p>
+                </div>
+                <div class="card-image-container">
+                    <img src="https://i.pinimg.com/736x/c2/f5/3b/c2f53b6d2f1b94598d727e7c61e77d75.jpg" alt="Beach Tennis">
+                </div>
+                <div class="card-footer">
+                    <div class="product-info">
+                        <span class="product-name">BeachTennis</span>
+                        <span class="product-category">Beach Tennis</span>
+                    </div>
                     <button class="expand-button" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
                     </button>
-                    <div class="card-description">
-                        <p>Perfeita para lazer e diversão com amigos e família. Fácil de montar e transportar, ideal para qualquer ambiente.</p>
-                    </div>
+                </div>
+                <div class="card-description-expanded">
+                    <p>Crie sua rede com cores e logotipos exclusivos. Destaque-se na quadra com um produto feito sob medida para você.</p>
                 </div>
             </div>
-            <div class="catalog-card animate-item">
-                <img src="img\redinha.jfif" alt="Redinha">
-                <div class="card-content">
-                    <h3>Redinha</h3>
-                    <button class="expand-button" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-                    </button>
-                    <div class="card-description">
-                        <p>Crie sua rede com cores e logotipos exclusivos. Destaque-se na quadra com um produto feito sob medida para você.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="catalog-card animate-item">
-                <img src="https://i.pinimg.com/736x/c2/f5/3b/c2f53b6d2f1b94598d727e7c61e77d75.jpg" alt="Beach Tennis">
-                <div class="card-content">
-                    <h3>BeachTennis</h3>
-                    <button class="expand-button" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-                    </button>
-                    <div class="card-description">
-                        <p>Crie sua rede com cores e logotipos exclusivos. Destaque-se na quadra com um produto feito sob medida para você.</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="catalog-card animate-item">
-                <img src="https://i.pinimg.com/736x/46/17/e9/4617e9b874bef06aac8074e446ba5798.jpg" alt="Volei">
-                <div class="card-content">
-                    <h3>Vôlei</h3>
-                    <button class="expand-button" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-                    </button>
-                    <div class="card-description">
-                        <p>Crie sua rede com cores e logotipos exclusivos. Destaque-se na quadra com um produto feito sob medida para você.</p>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </section>
 
     <section id="numbers" class="numbers-section animated-section" data-animate-elements>
-        <div class="numbers-background"></div>
         <div class="numbers-content">
             <div class="numbers-text-area animate-item">
-                <h2>Seu Jogo, <br>Nossa Paixão.</h2>
-                <p>Transforme sua experiência no futevôlei com redes de alta performance.</p>
-                <a href="https://wa.me/SEU_NUMERO_WHATSAPP" target="_blank" class="whatsapp-button">Fale Conosco no WhatsApp</a>
+                <h2>Quem Joga,<br>joga com Toinho!</h2>
+                <p>Mais de 10 anos firmando redes por toda a Bahia com qualidade, confiança e amor pelo esporte.</p>
+                <a href="https://wa.me/SEU_NUMERO_WHATSAPP" target="_blank" class="whatsapp-button">Fala comigo!</a>
             </div>
             <div class="numbers-grid">
-                <div class="number-card animate-item">
-                    <h3>+500</h3>
-                    <p>Redes pela Bahia</p>
+                <div class="number-card">
+                    <h3>🔥+450 Redes</h3>
+                    <p>Instaladas em toda Bahia</p>
                 </div>
-                <div class="number-card animate-item">
-                    <h3>+10</h3>
-                    <p>Anos de Experiência</p>
+                <div class="number-card">
+                    <h3>📈+10</h3>
+                    <p>De estrada, experiência e entrega.</p>
                 </div>
-                <div class="number-card animate-item">
-                    <h3>100%</h3>
-                    <p>Satisfação Garantida</p>
+                <div class="number-card">
+                    <h3>⭐100% Indicada</h3>
+                    <p>Clientes que confiam e voltam.</p>
                 </div>
-                <div class="number-card animate-item">
-                    <h3>Qualidade</h3>
-                    <p>Comprovada</p>
+                <div class="number-card">
+                    <h3>🏅Segurança</h3>
+                    <p>Garantida em eventos oficiais.</p>
                 </div>
             </div>
         </div>
